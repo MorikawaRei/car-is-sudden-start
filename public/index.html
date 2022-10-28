@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scale=yes, initial-scale=1.0, maximum-scale=5.0" />
+    <title>sudden start</title>
+    <link rel="stylesheet" href="https://use.typekit.net/mos0zao.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="smartphone" style="display: none;">
+    <h1 id="hero">急発進回数</h1>
+    <div id="div_join_screen">
+      <!-- エンターキーによるボタン押下を行うために、<button>ではなく<form>と<input type="submit">を使用。
+      ボタン押下(=submit)時にページリロードが行われないように、onsubmitの設定の最後に"return false;"を追加 -->
+      <form id="user_form" action="" onsubmit="onsubmitButton_Join(); return false;">
+          <span id="alert">please set user name.</span>
+          <input type="text" id="input_username" placeholder="user name" autofocus>
+          <input type="submit" id="button_join" value="Join!" />
+      </form>
+    </div>
+    <div id="div_chat_screen">
+      <div id="div_userinfo">
+        <input type="text" id="text_username" readonly="readonly">
+        <div>
+          <!-- 加速度 XMIN: <span id="my_acg_x"></span>, XMAX: <span id="XMAX"></span>, YMIN: <span id="my_acg_y"></span>, YMAX: <span id="YMAX"></span>, ZMIN: <span id="my_acg_z"></span> ZMAX: <span id="ZMAX"></span> -->
+          <!-- <br />
+          GAMMA: <span id="my_gamma"></span>, BETA: <span id="my_beta"></span>, ALPHA: <span id="my_alpha"></span>
+          <br /> -->
+          急発進: <span id="step"></span>
+            <div class="demo1">
+              PCでは、加速度センサーの取得ができません<p></p>
+              <div class="btn">加速度センサーを許可</div>
+              <p>左・右の傾き判定</p>
+              <div class="tilt">
+                  <span>右</span><span>左</span>
+              </div>
+              <p>奥・手前の傾き判定</p>
+              <div class="depth">
+                  <span>手前</span><span>奥</span>
+              </div>
+              <ul class="txt">
+                  <li class="result_acc"><span>0</span></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <!-- <button id="control_data" onclick="stopSendData()">Stop!</button> -->
+    </div>
+  </div>
+  <div id="desktop" style="display: none;">
+    <h1>sudden start</h1>
+    <div id="tmp"></div>
+    <div id="sample">
+      <div id="step">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+    <!-- Script -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@^2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@^1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+
+  <!-- ライブラリ読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- jsファイル読み込み -->
+  <script src="sample.js"></script>
+</body>
+</html>
