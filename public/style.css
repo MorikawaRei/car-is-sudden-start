@@ -157,7 +157,7 @@ input[type="submit"] {
 
 #step {
   width: 70%;
-  /* height: 40%; */
+  height: 40%;
 }
 
 #user_name {
@@ -341,4 +341,8 @@ header .ss-top {
 	    margin: 83px auto 58px;
     padding: 9px 0;
     text-align: center;
+}
+
+.bottom_space {
+  margin-bottom: 5em;
 }

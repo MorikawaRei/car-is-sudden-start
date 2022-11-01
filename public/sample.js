@@ -22,9 +22,9 @@ if (window.DeviceOrientationEvent) {
 // 加速度センサーの値を利用
 function acceleration() {
     // 加速度センサーの値を各変数に格納（値が小さく比較しずらいので100倍に）
-    var x = 100 * event.accelerationIncludingGravity.x;
-    var z = 100 * event.accelerationIncludingGravity.z;
-    var y = 100 * event.accelerationIncludingGravity.y;
+    var x = event.accelerationIncludingGravity.x;
+    var z = event.accelerationIncludingGravity.z;
+    var y = event.accelerationIncludingGravity.y;
 
     // 右・左の判定
     if (x < 0) {
@@ -43,4 +43,9 @@ function acceleration() {
         $(".depth span").eq(0).addClass("color");
     }
     $(".result_acc span").html("加速度<br />" + "X：" + x.toFixed(2) + "<br />" + "Y：" + y.toFixed(2) + "<br />" + "Z：" + z.toFixed(2) + "<br />");
+    if (z > -1) {
+        $(".sudden_acc span").html("加速度<br />" + "Z：" + z.toFixed(2) + "<br />" + "急発進です");
+    } else {
+        $(".sudden_acc span").html("加速度<br />" + "Z：" + z.toFixed(2) + "<br />");
+    }
 }

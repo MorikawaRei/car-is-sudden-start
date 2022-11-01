@@ -12,6 +12,7 @@
   <div id="smartphone" style="display: none;">
     <h1 id="hero">急発進回数</h1>
     <div id="div_join_screen">
+
       <!-- エンターキーによるボタン押下を行うために、<button>ではなく<form>と<input type="submit">を使用。
       ボタン押下(=submit)時にページリロードが行われないように、onsubmitの設定の最後に"return false;"を追加 -->
       <form id="user_form" action="" onsubmit="onsubmitButton_Join(); return false;">
@@ -32,6 +33,12 @@
             <div class="demo1">
               PCでは、加速度センサーの取得ができません<p></p>
               <div class="btn">加速度センサーを許可</div>
+
+              <ul class="txt">
+                <li class="sudden_acc"><span>0</span></li>
+              </ul>
+
+              <p class="bottom_space">詳細⬇</p>
               <p>左・右の傾き判定</p>
               <div class="tilt">
                   <span>右</span><span>左</span>
@@ -40,6 +47,7 @@
               <div class="depth">
                   <span>手前</span><span>奥</span>
               </div>
+
               <ul class="txt">
                   <li class="result_acc"><span>0</span></li>
               </ul>

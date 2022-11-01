@@ -23,7 +23,7 @@ let labelData = [];
 let g_mapRtcPeerConnection = new Map();
 
 // 動的しきい値のサンプル数
-const THRESHOLD = 50;
+const THRESHOLD = 65;
 let stepCount = 0;
 let sampleCount = 0;
 let filterCount = 0;
@@ -107,9 +107,9 @@ function deviceMotion(e) {
   } else {
     filterCount = 0;
     axis_result = {
-      x: filterData.x / 4,
-      y: filterData.y / 4,
-      z: filterData.z / 4,
+      x: filterData.x / 8,
+      y: filterData.y / 8,
+      z: filterData.z / 1,
     };
     filterData = { x: 0, y: 0, z: 0 };
   }
