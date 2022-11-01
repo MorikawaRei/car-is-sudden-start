@@ -8,3 +8,10 @@
               socket.io
               chart.js
               ngrok
+             
+使用方法     同じ Wi-Fi に PC / スマホで接続する
+PC のIPアドレスを確認する（１３３７）
+localhost を PC で起動
+
+または　localhost を PC で起動後ngrokをngrok http 1337で実行してください
+
