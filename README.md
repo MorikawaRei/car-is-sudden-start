@@ -6,3 +6,4 @@
 使用した技術    node.js
               socket.io
               chart.js
+              ngrok
