@@ -16,3 +16,6 @@ localhost を PC で起動(node server.js)
 
 または　localhost を PC で起動(node server.js)後ngrokをngrok http 1337で実行してください
 
+
+
+アルゴリズム制作途中
