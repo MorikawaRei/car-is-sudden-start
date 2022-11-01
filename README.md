@@ -9,9 +9,10 @@
               chart.js
               ngrok
              
-使用方法     同じ Wi-Fi に PC / スマホで接続する
+使用方法
+同じ Wi-Fi に PC / スマホで接続する
 PC のIPアドレスを確認する（１３３７）
-localhost を PC で起動
+localhost を PC で起動node server.js
 
 または　localhost を PC で起動後ngrokをngrok http 1337で実行してください
 
